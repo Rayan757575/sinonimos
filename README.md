@@ -2,7 +2,7 @@
 
 ## 📌 Sobre o Projeto
 
-Esta é uma aplicação web que permite aos usuários buscar sinônimos de palavras em inglês, utilizando a API Datamuse. A interface foi desenvolvida com Next.js, estilizada com Tailwind CSS e inclui funcionalidades como seleção de idioma e dark/light mode.
+Esta é uma aplicação web que permite aos usuários buscar sinônimos de palavras em inglês, utilizando a API Datamuse, criada com o intuito de praticar minhas habilidades em React, Tailwind CSS e Next.js. A interface foi desenvolvida com Next.js, estilizada com Tailwind CSS e inclui funcionalidades como seleção de idioma e dark/light mode.
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -36,16 +36,16 @@ ESLint (para padronização do código)
 
 ### 1️⃣ Clonar o Repositório
 
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
+`git clone https://github.com/seu-usuario/nome-do-repositorio.git`
 
 ### 2️⃣ Instalar Dependências
 
-cd nome-do-repositorio
-npm install
+`cd nome-do-repositorio
+npm install`
 
 ### 3️⃣ Rodar o Servidor de Desenvolvimento
 
-npm run dev
+`npm run dev`
 
 O projeto estará disponível em http://localhost:3000.
 
@@ -55,9 +55,10 @@ O projeto estará disponível em http://localhost:3000.
 ├── public/                # Arquivos estáticos
 ├── src/
 │   ├── components/        # Componentes reutilizáveis
+|   |   ├── IdiomaSelectMenu.js # Select Menu de idiomas
 │   │   ├── Header.js      # Cabeçalho com seletor de idioma
 │   │   ├── BuscaSinonimos.js # Componente principal de busca
-│   ├── pages/             # Páginas da aplicação
+│   ├── app/             # Páginas da aplicação
 │   ├── styles/            # Estilos globais
 ├── .eslintrc.js           # Configuração do ESLint
 ├── tailwind.config.js     # Configuração do Tailwind CSS
@@ -70,8 +71,8 @@ A aplicação consome a Datamuse API para obter sinônimos:
 
 Documentação da Datamuse API
 
-## 📝 TODO
-
+## 📝 TO DO
+- implementar bot para que seja possivel gerar sinonimos de palavras de diferentes linguas
 
 
 ## 🏗 Contribuição
