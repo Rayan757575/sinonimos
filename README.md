@@ -77,5 +77,5 @@ Abra um Pull Request 🚀
 
 Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
 
-Desenvolvido por Seu Nome 🚀
+Desenvolvido por Rayan Cata Preta 🚀
 
