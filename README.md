@@ -49,22 +49,6 @@ npm install`
 
 O projeto estará disponível em http://localhost:3000.
 
-## 📂 Estrutura do Projeto
-
-/
-├── public/                # Arquivos estáticos
-├── src/
-│   ├── components/        # Componentes reutilizáveis
-|   |   ├── IdiomaSelectMenu.js # Select Menu de idiomas
-│   │   ├── Header.js      # Cabeçalho com seletor de idioma
-│   │   ├── BuscaSinonimos.js # Componente principal de busca
-│   ├── app/             # Páginas da aplicação
-│   ├── styles/            # Estilos globais
-├── .eslintrc.js           # Configuração do ESLint
-├── tailwind.config.js     # Configuração do Tailwind CSS
-├── package.json           # Dependências do projeto
-├── README.md              # Documentação
-
 ## 🔗 API Utilizada
 
 A aplicação consome a Datamuse API para obter sinônimos:
