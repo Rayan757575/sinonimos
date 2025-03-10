@@ -40,8 +40,9 @@ ESLint (para padronização do código)
 
 ### 2️⃣ Instalar Dependências
 
-`cd nome-do-repositorio
-npm install`
+`cd nome-do-repositorio`
+
+`npm install`
 
 ### 3️⃣ Rodar o Servidor de Desenvolvimento
 
