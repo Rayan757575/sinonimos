@@ -18,15 +18,15 @@ export default function BuscaSinonimos() {
   return (
     <div className="p-8 space-y-6">
       <div className="text-center">
-        <h1 className="text-3xl font-bold">Buscador de Sinônimos</h1>
-        <p className="text-gray-600">Digite uma palavra para encontrar sinônimos</p>
+        <h1 className="text-3xl font-bold">Synonymous finder</h1>
+        <p className="text-gray-600">Type a word to find synonymous</p>
       </div>
 
       <div className="flex justify-center">
         <input
           type="text"
           className="border border-gray-300 p-2 rounded-lg shadow-md"
-          placeholder="Digite uma palavra"
+          placeholder="Type a word"
           value={palavra}
           onChange={(e) => setPalavra(e.target.value)}
         />
@@ -34,7 +34,7 @@ export default function BuscaSinonimos() {
           onClick={buscarSinonimos}
           className="ml-4 bg-blue-500 text-white p-2 rounded-lg shadow-md hover:bg-blue-600"
         >
-          Buscar
+          Search
         </button>
       </div>
 
@@ -45,7 +45,7 @@ export default function BuscaSinonimos() {
             {sinonimos.map((item, index) => (
               <span
                 key={index}
-                className="text-lg bg-gray-200 px-3 py-1 rounded-lg shadow-md"
+                className="text-lg text-black bg-gray-200 hover:bg-gray-100 shadow-md px-3 py-1 rounded-lg "
               >
                 {item.word}
               </span>

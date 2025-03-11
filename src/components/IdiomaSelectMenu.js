@@ -4,7 +4,7 @@
 
 import { useState } from 'react'
 import { Label, Listbox, ListboxButton, ListboxOption, ListboxOptions } from '@headlessui/react'
-import { ChevronUpDownIcon } from '@heroicons/react/24/solid' 
+import { ChevronUpDownIcon } from '@heroicons/react/24/solid'
 import { CheckIcon } from '@heroicons/react/20/solid'
 
 const idiomas = [
@@ -21,12 +21,12 @@ const idiomas = [
 ]
 
 export default function IdiomaSelectMenu() {
+
   const [selectedIdioma, setSelectedIdioma] = useState(idiomas[0]) // Começa com Português selecionado
 
   return (
     <Listbox value={selectedIdioma} onChange={setSelectedIdioma}>
-      <Label className="block text-sm font-medium text-white">Selecione um idioma</Label>
-      <div className="relative mt-2">
+      <div className="relative mt-2 w-35">
         <ListboxButton className="grid w-full cursor-default grid-cols-1 rounded-md bg-white py-1.5 pr-2 pl-3 text-left text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm">
           <span className="col-start-1 row-start-1 flex items-center gap-3 pr-6">
             <span className="block truncate">{selectedIdioma.name}</span>
