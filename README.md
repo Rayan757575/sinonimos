@@ -57,8 +57,9 @@ A aplicação consome a Datamuse API para obter sinônimos:
 Documentação da Datamuse API
 
 ## 📝 TO DO
-- implementar bot para que seja possivel gerar sinonimos de palavras de diferentes linguas
-
+- implementar bot para que seja possivel gerar sinonimos de palavras de diferentes linguas;
+- alterar o estilo do dark mode button;
+- definir o esquema de cores.
 
 ## 🏗 Contribuição
 
