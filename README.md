@@ -36,7 +36,7 @@ ESLint (para padronização do código)
 
 ### 1️⃣ Clonar o Repositório
 
-`git clone https://github.com/seu-usuario/nome-do-repositorio.git`
+`git clone https://github.com/Rayan757575/sinonimos`
 
 ### 2️⃣ Instalar Dependências
 
