@@ -40,7 +40,7 @@ export default function BuscaSinonimos() {
 
       {sinonimos.length > 0 && (
         <div className="text-center">
-          <h2 className="text-xl font-semibold mb-2">Sinônimos:</h2>
+          <h2 className="text-xl font-semibold mb-2">Synonyms:</h2>
           <div className="flex flex-wrap justify-center gap-3">
             {sinonimos.map((item, index) => (
               <span

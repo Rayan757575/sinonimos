@@ -1,36 +1,31 @@
 "use client";
-import { useState, useEffect } from "react";
+
+import { useEffect, useState } from "react";
+import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
 
 export default function ThemeToggle() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [theme, setTheme] = useState(() => {
+    if (typeof window !== "undefined") {
+      return localStorage.getItem("theme") || "light";
+    }
+    return "light";
+  });
 
   useEffect(() => {
-    // Verifica o tema salvo no localStorage
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark") {
-      document.documentElement.classList.add("dark");
-      setDarkMode(true);
-    }
-  }, []);
-
-  const toggleTheme = () => {
-    if (darkMode) {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-      setDarkMode(false);
-    } else {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-      setDarkMode(true);
-    }
-  };
+    document.documentElement.classList.toggle("dark", theme === "dark");
+    localStorage.setItem("theme", theme);
+  }, [theme]);
 
   return (
     <button
-      onClick={toggleTheme}
-      className="p-2 rounded-md bg-gray-200 text-black dark:bg-gray-800 transition-all"
+      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      className="p-2 rounded-full transition duration-300 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200"
     >
-      {darkMode ? "🌙 Dark Mode" : "☀️ Light Mode"}
+      {theme === "dark" ? (
+        <SunIcon className="w-6 h-6" />
+      ) : (
+        <MoonIcon className="w-6 h-6" />
+      )}
     </button>
   );
 }

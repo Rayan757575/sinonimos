@@ -3,6 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --background-header: #f6f8fa;
+  --subtitle-color: #fff
 }
 
 @theme inline {
@@ -16,14 +18,16 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --background-header:#141821;
+    --subtitle-color: #fff
   }
 }
 
 .dark {
   --background: #1a202c;
   --foreground: #ffffff;
-  --background-header: rgb(37, 37, 46);
-  --subtitle-color: #fff
+  --background-header: #141821;
+  --subtitle-color: #fff;
 }
 
 body {
@@ -31,10 +35,14 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
   top: 0px !important;
+  
+  transition: 0.2s ease-in-out;
 }
 
 header {
   background: var(--background-header);
+  
+  transition: 0.2s ease-in-out;
 }
 
 /* Esconde completamente a interface do Google Translate */
