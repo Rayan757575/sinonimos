@@ -1,5 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import IdiomaSelectMenu from "@/components/IdiomaSelectMenu";
+import GoogleTranslate from "@/components/GoogleTranslate"; // Importando o novo componente
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,10 +21,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
+        {/* Google Translate */}
+        <GoogleTranslate/>
       </body>
     </html>
   );

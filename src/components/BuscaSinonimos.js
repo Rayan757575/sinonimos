@@ -32,7 +32,7 @@ export default function BuscaSinonimos() {
         />
         <button
           onClick={buscarSinonimos}
-          className="ml-4 bg-blue-500 text-white p-2 rounded-lg shadow-md hover:bg-blue-600"
+          className="ml-4 bg-blue-500 text-white p-2 rounded-lg shadow-md hover:bg-blue-600 transition-color duration-300"
         >
           Search
         </button>
@@ -45,7 +45,7 @@ export default function BuscaSinonimos() {
             {sinonimos.map((item, index) => (
               <span
                 key={index}
-                className="text-lg text-black bg-gray-200 hover:bg-gray-100 shadow-md px-3 py-1 rounded-lg "
+                className="text-lg text-black bg-gray-200 hover:bg-gray-100 transition-color duration-500 shadow-md px-3 py-1 rounded-lg "
               >
                 {item.word}
               </span>
