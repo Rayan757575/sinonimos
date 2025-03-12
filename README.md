@@ -20,7 +20,7 @@ Datamuse API (para busca de sinônimos)
 
 ESLint (para padronização do código)
 
-🎯 Funcionalidades
+## 🎯 Funcionalidades
 
 🔎 Busca de sinônimos em inglês via API.
 
