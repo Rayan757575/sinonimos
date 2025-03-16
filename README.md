@@ -57,7 +57,9 @@ A aplicação consome a Datamuse API para obter sinônimos:
 Documentação da Datamuse API
 
 ## 📝 TO DO
+- solucionar o problema com a API Key;
 - implementar bot para que seja possivel gerar sinonimos de palavras de diferentes linguas;
+- atualizar os componentes
 - definir o esquema de cores.
 
 ## 🏗 Contribuição
