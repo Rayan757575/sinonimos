@@ -19,13 +19,13 @@ export default function BuscaSinonimos() {
     <div className="p-8 space-y-6">
       <div className="text-center">
         <h1 className="text-3xl font-bold">Synonymous finder</h1>
-        <p className="text-gray-600">Type a word to find synonymous</p>
+        <p className="text-gray-400">Type a word to find synonymous</p>
       </div>
 
       <div className="flex justify-center">
         <input
           type="text"
-          className="border border-gray-300 p-2 rounded-lg shadow-md"
+          className="border border-gray-300 p-2 rounded-lg shadow-md placeholder-gray-500"
           placeholder="Type a word"
           value={palavra}
           onChange={(e) => setPalavra(e.target.value)}
