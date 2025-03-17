@@ -1,7 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import IdiomaSelectMenu from "@/components/IdiomaSelectMenu";
 import GoogleTranslate from "@/components/GoogleTranslate"; // Importando o novo componente
+import { IdiomaProvider } from "@/context/IdiomaContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,9 +22,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {children}
+        <IdiomaProvider> {/* 🔹 Agora, toda a aplicação tem acesso ao idioma */}
+          {children}
+        </IdiomaProvider>
         {/* Google Translate */}
-        <GoogleTranslate/>
+        <GoogleTranslate />
       </body>
     </html>
   );

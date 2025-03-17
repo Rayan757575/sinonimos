@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useIdioma } from "@/context/IdiomaContext";
 
 const languages = [
   { code: "en", label: "English" },
@@ -9,21 +9,14 @@ const languages = [
 ];
 
 export default function IdiomaSelectMenu() {
-  const [selectedLanguage, setSelectedLanguage] = useState("en");
-
-  const handleLanguageChange = (event) => {
-    const newLang = event.target.value;
-    setSelectedLanguage(newLang);
-
-    const googleTranslate = document.querySelector(".goog-te-combo");
-    if (googleTranslate) {
-      googleTranslate.value = newLang;
-      googleTranslate.dispatchEvent(new Event("change"));
-    }
-  };
+  const { idioma, mudarIdioma } = useIdioma();
 
   return (
-    <select value={selectedLanguage} onChange={handleLanguageChange} className="p-2 block border rounded-lg shadow-sm w-35 ">
+    <select
+      value={idioma}
+      onChange={(e) => mudarIdioma(e.target.value)}
+      className="p-2 block border rounded-lg shadow-sm w-35"
+    >
       {languages.map((lang) => (
         <option key={lang.code} value={lang.code} className="text-black bg-gray-100">
           {lang.label}

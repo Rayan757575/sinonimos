@@ -1,18 +1,32 @@
 "use client";
-
-import { useState } from 'react';
+import { useState } from "react";
+import { useIdioma } from "@/context/IdiomaContext";
 
 export default function BuscaSinonimos() {
-  const [palavra, setPalavra] = useState('');
+  const [palavra, setPalavra] = useState("");
   const [sinonimos, setSinonimos] = useState([]);
+  const { idioma } = useIdioma(); // Obtém o idioma selecionado
 
   const buscarSinonimos = async () => {
     if (!palavra) return;
 
-    const response = await fetch(`https://api.datamuse.com/words?rel_syn=${palavra}`);
-    const data = await response.json();
+    try {
+      const response = await fetch("/api/testOpenAI", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ palavra, idioma }),
+      });
 
-    setSinonimos(data);
+      const data = await response.json();
+
+      if (response.ok) {
+        setSinonimos(data.sinonimos.split(", ")); // Transforma a string em array
+      } else {
+        console.error("Erro ao buscar sinônimos:", data.error);
+      }
+    } catch (error) {
+      console.error("Erro na conexão:", error);
+    }
   };
 
   return (
@@ -45,9 +59,9 @@ export default function BuscaSinonimos() {
             {sinonimos.map((item, index) => (
               <span
                 key={index}
-                className="text-lg text-black bg-gray-200 hover:bg-gray-100 transition-color duration-500 shadow-md px-3 py-1 rounded-lg "
+                className="text-lg text-black bg-gray-200 hover:bg-gray-100 transition-color duration-500 shadow-md px-3 py-1 rounded-lg"
               >
-                {item.word}
+                {item}
               </span>
             ))}
           </div>
