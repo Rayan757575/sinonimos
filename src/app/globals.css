@@ -1,11 +1,7 @@
 @import "tailwindcss";
 
-/* === 1. Definição de Variáveis de Cor === */
 :root {
   --background: #ffffff;
-  
-  /* ANTES: #171717 (Preto profundo) */
-  /* AGORA: #333333 (Cinza chumbo suave) - Pode testar #2d2d2d também se preferir mais escuro */
   --foreground: #333333; 
 }
 

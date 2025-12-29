@@ -1,4 +1,4 @@
-"use client"; // Agora sim, esse pode ser um Client Component
+"use client"; 
 
 import { useEffect } from "react";
 
