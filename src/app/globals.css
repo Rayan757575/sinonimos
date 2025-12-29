@@ -1,10 +1,12 @@
 @import "tailwindcss";
 
+/* === 1. Definição de Variáveis de Cor === */
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-  --background-header: #f6f8fa;
-  --subtitle-color: #fff
+  
+  /* ANTES: #171717 (Preto profundo) */
+  /* AGORA: #333333 (Cinza chumbo suave) - Pode testar #2d2d2d também se preferir mais escuro */
+  --foreground: #333333; 
 }
 
 @theme inline {
@@ -14,38 +16,25 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --background-header:#141821;
-    --subtitle-color: #fff
+/* Quando a classe .dark for ativa */
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
+@layer base {
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   }
 }
 
-.dark {
-  --background: #1a202c;
-  --foreground: #ffffff;
-  --background-header: #141821;
-  --subtitle-color: #fff;
-}
-
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
   top: 0px !important;
-  
-  transition: 0.2s ease-in-out;
 }
 
-header {
-  background: var(--background-header);
-  
-  transition: 0.2s ease-in-out;
-}
-
-/* Esconde completamente a interface do Google Translate */
 .goog-te-banner-frame,
 .goog-te-gadget,
 iframe {
