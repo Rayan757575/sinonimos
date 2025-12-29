@@ -1,37 +1,33 @@
-# Aplicação Web de Sinônimos
+# Synonymous Finder - Aplicação Web de Sinônimos
 
 ## 📌 Sobre o Projeto
 
-Esta é uma aplicação web que permite aos usuários buscar sinônimos de palavras em inglês, utilizando a API Datamuse, criada com o intuito de praticar minhas habilidades em React, Tailwind CSS e Next.js. A interface foi desenvolvida com Next.js, estilizada com Tailwind CSS e inclui funcionalidades como seleção de idioma e dark/light mode.
+Esta é uma aplicação web moderna que permite aos usuários buscar sinônimos de palavras em **Inglês, Português, Espanhol e Francês**.
 
-## 🚀 Tecnologias Utilizadas
+O projeto foi refatorado para utilizar uma **arquitetura de "Estratégia Híbrida" (Bridge Pattern)**: dependendo do idioma selecionado, o sistema decide inteligentemente se consulta uma API nativa ou se utiliza uma estratégia de tradução e busca cruzada (para garantir resultados ricos mesmo em idiomas com menos suporte de APIs públicas).
 
-Next.js (React Framework)
+A interface foi desenvolvida com **Next.js**, estilizada com **Tailwind CSS** e conta com persistência de preferências de usuário (tema e idioma).
 
-JavaScript (sem TypeScript)
+## 🚀 Tecnologias e Conceitos
 
-Tailwind CSS (para estilização)
-
-Headless UI (para componentes interativos)
-
-Heroicons (para ícones)
-
-Datamuse API (para busca de sinônimos)
-
-ESLint (para padronização do código)
+* **Next.js 13+** (App Router & React Hooks)
+* **JavaScript** (ES6+)
+* **Tailwind CSS** (Estilização e Dark Mode nativo via classe)
+* **Context API** (Gerenciamento de estado global para Idioma e Tema)
+* **Heroicons** (Ícones da interface)
+* **Strategy Pattern** (Lógica de seleção de APIs de sinônimos)
 
 ## 🎯 Funcionalidades
 
-🔎 Busca de sinônimos em inglês via API.
-
-🌙 Suporte a dark/light mode.
-
-🌎 Seletor de idioma (preparado para futuras expansões).
-
-📱 Layout responsivo e moderno.
-
-⚡ Animação na exibição dos sinônimos.
-
+* 🔎 **Busca Multi-idioma:** Suporte para Inglês, Português, Espanhol e Francês.
+* 🧠 **Smart Fallback (Ponte):** Se a API nativa falhar ou não existir, o sistema traduz a palavra para inglês, busca na base robusta do Datamuse e traduz os resultados de volta.
+* 🌙 **Dark Mode Real:** Persistência de tema (localStorage) e detecção de preferência do sistema.
+* ⚡ **UX Refinada:**
+    * **Page Loader** para evitar "pulos" visuais na tradução.
+    * **Animações** de "Fade In" e cascata nos resultados.
+    * **Título dinâmico** na aba do navegador.
+* 🌎 **Interface Traduzida:** Integração via cookie com Google Translate para traduzir textos fixos.
+* 📱 **Responsividade:** Layout adaptável para mobile e desktop.
 ## 🛠 Como Rodar o Projeto
 
 ### 1️⃣ Clonar o Repositório
@@ -40,7 +36,7 @@ ESLint (para padronização do código)
 
 ### 2️⃣ Instalar Dependências
 
-`cd nome-do-repositorio`
+`cd sinonimos`
 
 `npm install`
 
@@ -52,13 +48,13 @@ O projeto estará disponível em http://localhost:3000.
 
 ## 🔗 API Utilizada
 
-A aplicação consome a Datamuse API para obter sinônimos:
+O sistema utiliza um mix de serviços para garantir a melhor resposta:
 
-[Documentação da Datamuse API](https://www.datamuse.com/api)
+[Datamuse API](https://www.datamuse.com/api): Principal fonte para inglês e base da estratégia "Ponte".
 
-## 📝 TO DO
-- implementar bot para que seja possivel gerar sinonimos de palavras de diferentes linguas;
-- definir o esquema de cores.
+Dicio API (Unofficial): Fonte nativa para Português.
+
+Google Translate (GTX): Utilizado internamente para traduções de interface e suporte à estratégia de busca cruzada.
 
 ## 🏗 Contribuição
 
