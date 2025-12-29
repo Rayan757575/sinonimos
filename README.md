@@ -54,7 +54,7 @@ O projeto estará disponível em http://localhost:3000.
 
 A aplicação consome a Datamuse API para obter sinônimos:
 
-Documentação da Datamuse API
+[Documentação da Datamuse API](https://www.datamuse.com/api)
 
 ## 📝 TO DO
 - implementar bot para que seja possivel gerar sinonimos de palavras de diferentes linguas;
