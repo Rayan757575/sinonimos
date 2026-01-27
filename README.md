@@ -1,4 +1,4 @@
-# Synonymous Finder - Aplicação Web de Sinônimos
+# Synonymous Finder - Aplicação Web de Sinônimos mudança
 
 ## 📌 Sobre o Projeto
 
